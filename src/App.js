@@ -19,22 +19,16 @@ import Devices from "./pages/devices/devices";
 
 export default function App() {
   const user = useSelector(selectUser);
+  console.log("user: ", user);
 
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
           <Route path="/">
-            <Route
-              index
-              element={
-                user == undefined || user.login !== 1 ? <Login /> : <Home />
-              }
-            />
+            <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="users">
-              {/* <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} /> */}
               <Route
                 path="register"
                 element={

@@ -13,7 +13,7 @@ const Navbar = ({ isOpen, setIsOpen, title, searchBar }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="navbar">
+    <div className="navbar !bg-[#1e2124]">
       <div className="wrapper">
         <div className="left">
           {isSmallScreen && (
